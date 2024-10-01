@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Outfit", system-ui;
+    box-sizing: border-box;
+}
+
+body {
+    background: #121826 url("img/Background_image.svg") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+header h1 {
+    width: 40%;
+    color: #E5E7EB;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #9DA3AE;
+    margin-bottom: 40px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Para mejor ajuste en pantallas más pequeñas */
+}
+
+article {
+    width: 30%;
+    background-color: #212936;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-10px);
+}
+
+article i {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article .uno { background-color: #FCEED8; }
+article .dos { background-color: #DEE9FC; }
+article .tres { background-color: #FBE5E6; }
+
+article h3 {
+    color: #E5E7EB;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+article p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #9DA3AE;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+article img {
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+/* Media queries para pantallas medianas (1024px) */
+@media (max-width: 1024px) {
+    header h1 {
+        width: 50%;
+        font-size: 35px;
+    }
+
+    section {
+        width: 90%;
+        justify-content: space-around;
+    }
+
+    article {
+        width: 40%;
+    }
+    article h3{
+        width: 80%;
+    }
+}
+
+/* Media queries para pantallas pequeñas (640px) */
+@media (max-width: 640px) {
+    header h1 {
+        width: 70%;
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    section {
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article {
+        width: 80%;
+    }
+
+    article p {
+        font-size: 16px;
+    }
+}
